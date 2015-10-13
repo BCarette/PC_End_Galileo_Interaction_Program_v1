@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{624f973e-3ff0-4dc3-9fef-46d0230fc228}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>PRACAM-Globe_user_application.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="bluetoothSocketPC.py" />
+    <Compile Include="GUI\loadRobotStateDialog.py" />
+    <Compile Include="GUI\robotBootedDialog.py" />
+    <Compile Include="GUI\robotControlMainWindow.py" />
+    <Compile Include="GUI\ui_loadRobotStateDialog.py" />
+    <Compile Include="GUI\ui_robotBootedDialog.py" />
+    <Compile Include="GUI\ui_robotControlMainWindow.py" />
+    <Compile Include="GUI\__init__.py" />
+    <Compile Include="loggingHandler_GUIMessageBox.py" />
+    <Compile Include="mainPC.py" />
+    <Compile Include="modelPC.py" />
+    <Compile Include="PRACAM-Globe_user_application.py" />
+    <Compile Include="settingsPC.py" />
+    <Compile Include="stacktracer\stacktracer.py" />
+    <Compile Include="stacktracer\__init__.py" />
+    <Compile Include="Tracking.py" />
+    <Compile Include="TrackingProperties.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QtDesign_GUIs\convert readme.txt" />
+    <Content Include="Saved\FirstRollingSignals.PNG" />
+    <Content Include="Saved\Scrnsht--TrackPath-Ref_2015-05-05 19-02-50--Rec_2015-05-05 19-03-25--Rects.png" />
+    <Content Include="Saved\Scrnsht--TrackPath-Ref_2015-05-05 19-02-50--Rec_2015-05-05 19-03-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI" />
+    <Folder Include="QtDesign_GUIs" />
+    <Folder Include="Saved" />
+    <Folder Include="stacktracer" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
