@@ -4,6 +4,7 @@ from PyQt4.QtGui import *
 from GUI.robotControlMainWindow import RobotControlMainWindow
 from mainPC import MainPC
 
+#start up file
 def main():
     app = QApplication(sys.argv)
 
